@@ -2,9 +2,9 @@ import urllib.request, urllib.parse
 import json
 import time
 
-token = '61bb9e30860022e57953faa7755eb82c352956f888282a313a06d309909bd1b6ad330989981ee6d310f48'
+token = 'ololo'
 def getlongPollServer():
-    """делает запрос метода messages.getLongPollServer к vk API, в ответе возвращает кортеж из messages.getLongPollServer"""
+"""делает запрос метода messages.getLongPollServer к vk API, в ответе возвращает кортеж из messages.getLongPollServer"""
     params = urllib.parse.urlencode({'access_token':token})
     response = json.loads(urllib.request.urlopen('https://api.vk.com/method/messages.getLongPollServer?%s' % params).read().decode('UTF-8'))
     server = response['response']['server']
